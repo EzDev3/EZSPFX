@@ -6,8 +6,12 @@ export default function Index() {
   const [orgName, setOrgName] = React.useState("");
 
   const handleSubmit = () => {
-    createSite(orgName)
-    Alert.alert("Submitted Values", `First: ${orgName}`);
+    if (orgName?.trim()) {
+      createSite(orgName)
+      Alert.alert("Submitted Values", `First: ${orgName}`);
+    } else {
+      Alert.alert('Invalid Name', 'Please Enter A valid Organization Name')
+    }
   };
 
   return (
