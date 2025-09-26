@@ -29,7 +29,6 @@ export async function getMsAccessToken() {
     const searchBody = new URLSearchParams();
 
     searchBody.append("client_id", clientId);
-    searchBody.append("client_secret", clientSecret);
     searchBody.append("scope", "https://graph.microsoft.com/.default");
     searchBody.append("grant_type", "client_credentials");
 
